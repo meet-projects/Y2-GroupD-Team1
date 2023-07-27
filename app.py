@@ -22,21 +22,22 @@ firebase = pyrebase.initialize_app(config)
 auth = firebase.auth()
 db = firebase.database()
 
-@app.route('/', methods=['GET', 'POST'])
+@app.route('/')
+def home():
+    return render_template("home.html")
+
+@app.route('/signup', methods=['GET', 'POST'])
 def signup():
     if request.method == 'POST':
         email = request.form['email']
         password = request.form['password']
         username=request.form['username']
-        bio=request.form['bio']
-        pfp = "https://static.vecteezy.com/system/resources/previews/002/534/006/original/social-media-chatting-online-blank-profile-picture-head-and-body-icon-people-standing-icon-grey-background-free-vector.jpg"
-
         try:
             login_session['user'] = auth.create_user_with_email_and_password(email,password)
-            user={"email":email,"password":password,"username":username,"bio":bio,"pfp":pfp}
+            user={"email":email,"password":password,"username":username}
             UID=login_session['user']['localId']
             db.child("Users").child(UID).set(user)
-            return redirect(url_for('profile'))
+            return redirect(url_for('youhelp'))
         except:
             return redirect(url_for('signup'))
     return render_template("signup.html")
@@ -48,54 +49,53 @@ def signin():
         password = request.form['Password']
         try:
             login_session['user'] = auth.sign_in_with_email_and_password(email, password)
-            return redirect(url_for('profile'))
+            return redirect(url_for('youhelp'))
         except:
-            return redirect(url_for('signup'))
-    return render_template("signup.html")
+            return redirect(url_for('youhelp'))
+    return render_template("youhelp.html")
 
 
 
 
-@app.route('/add_memory', methods=['GET', 'POST'])
-def add_memory():
+@app.route('/post', methods=['GET', 'POST'])
+def post():
     if request.method == 'POST':
-        img=request.form['image']
         title=request.form['title']
-        text=request.form['text']
+        story=request.form['story']
         uid=login_session['user']['localId']
-        memory={"title":title,"text":text,"image":img,"uid":uid}
+        memory={"title":title,"story":story,"uid":uid}
         try:
-            db.child("memories").child(uid).set(memory)
-            return redirect(url_for('all_memories'))
+            db.child("stories").child(uid).set(memory)
+            return redirect(url_for('display'))
         except Exception as e:
             print(e)
-    return render_template("add_memory.html")
+    return render_template("post.html")
 
-@app.route('/change',methods=['GET', 'POST'])
-def change():
-    if request.method == 'POST':
-        username=request.form['username']
-        bio=request.form['bio']
-        pfp = request.form['pfp']
-
-
-        try:
-            UID = login_session['user']['localId']
-            changed_user={"username":username,"bio":bio,"pfp":pfp}
-            db.child("Users").child(UID).update(changed_user)
-            return redirect(url_for('profile'))  
-        except:
-            return redirect(url_for('change'))
-    return render_template("change.html")
+# @app.route('/change',methods=['GET', 'POST'])
+# def change():
+#     if request.method == 'POST':
+#         username=request.form['username']
+#         bio=request.form['bio']
+#         pfp = request.form['pfp']
 
 
+#         try:
+#             UID = login_session['user']['localId']
+#             changed_user={"username":username,"bio":bio,"pfp":pfp}
+#             db.child("Users").child(UID).update(changed_user)
+#             return redirect(url_for('profile'))  
+#         except:
+#             return redirect(url_for('change'))
+#     return render_template("change.html")
 
 
-@app.route('/all_of_memories',methods=['GET', 'POST'])
-def all_memories():
+
+
+@app.route('/display',methods=['GET', 'POST'])
+def display():
     UID=login_session['user']['localId']
-    all_of_memories=db.child("memories").child(UID).get().val()
-    return render_template("all_memories.html", p=all_of_memories)
+    stories=db.child("stories").child(UID).get().val()
+    return render_template("all_memories.html", p=stories)
 
 
 @app.route('/signout')
@@ -104,14 +104,9 @@ def signout():
     auth.current_user = None
     return redirect(url_for('signin'))
 
-@app.route('/profile',methods=['GET', 'POST'])
-def profile():
-    UID= login_session['user']['localId']
-    user_profile=db.child("Users").child(UID).get().val()
-    return render_template("profile.html",username=user_profile["username"], bio=user_profile["bio"], pfp=user_profile["pfp"])
 
-if __name__ == '__main__':
-    app.run(debug=True)
+
+
 
 
 

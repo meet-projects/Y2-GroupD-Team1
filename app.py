@@ -65,11 +65,28 @@ def post():
         uid=login_session['user']['localId']
         memory={"title":title,"story":story,"uid":uid}
         try:
-            db.child("stories").child(uid).set(memory)
+            post1={ "title":title,
+                    "story":story,
+                    "uid":uid,
+                    "memory":memory
+            }
+
+            db.child("stories").push(post1)
             return redirect(url_for('display'))
         except Exception as e:
             print(e)
     return render_template("post.html")
+
+
+
+
+@app.route('/display',methods=['GET', 'POST'])
+def display():
+    UID=login_session['user']['localId']
+    stories=db.child("stories").get().val()
+    return render_template("all_memories.html", p=stories)
+
+
 
 # @app.route('/change',methods=['GET', 'POST'])
 # def change():
@@ -91,11 +108,6 @@ def post():
 
 
 
-@app.route('/display',methods=['GET', 'POST'])
-def display():
-    UID=login_session['user']['localId']
-    stories=db.child("stories").child(UID).get().val()
-    return render_template("all_memories.html", p=stories)
 
 
 @app.route('/signout')

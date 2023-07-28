@@ -7,6 +7,16 @@
 </head>
 <body>
 
+<div class="card">
+  {% for post1 in p %}
+  <div class="card-text">
+    
+    <h2>{{ p[post1]['title'] }} </h2>
+    <p>{{ p[post1]['story'] }}</p>
+  </div>
+  {% endfor %}
+  </div>
+
 	
 </body>
 </html>

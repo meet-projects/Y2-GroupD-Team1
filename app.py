@@ -63,12 +63,11 @@ def post():
         title=request.form['title']
         story=request.form['story']
         uid=login_session['user']['localId']
-        memory={"title":title,"story":story,"uid":uid}
         try:
             post1={ "title":title,
                     "story":story,
                     "uid":uid,
-                    "memory":memory
+                    
             }
 
             db.child("stories").push(post1)

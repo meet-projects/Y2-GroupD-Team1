@@ -107,7 +107,13 @@ def display():
 
 
 
+@app.route('/statistics')
+def statistics():
+    return render_template("statistics.html")
 
+@app.route('/youhelp')
+def youhelp():
+    return render_template("youhelp.html")
 
 @app.route('/signout')
 def signout():

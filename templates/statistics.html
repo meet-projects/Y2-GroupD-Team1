@@ -1,11 +1,272 @@
 <!DOCTYPE html>
-<html>
+<html lang="en">
 <head>
-	<meta charset="utf-8">
-	<meta name="viewport" content="width=device-width, initial-scale=1">
-	<title>statistics</title>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>statistics</title>
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/animate.css/4.1.1/animate.min.css">
+  <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css" rel="stylesheet">
+  <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/js/bootstrap.bundle.min.js"></script>
+
+    <style>
+    /* Add some basic styling for demonstration purposes */
+    body {
+      font-family: Arial, sans-serif;
+      line-height: 1.6;
+      margin: 0;
+      padding: 0;
+    }
+
+    .active {
+      background-color: whitesmoke;
+      color: #8F3A84;
+    }
+
+    /* Optional: Add hover effect to the "Profile" button */
+    .navbar-nav .nav-it .nav-link:hover {
+      background-color: whitesmoke; /* Change the background color on hover */
+      color: #8F3A84; /* Change the text color on hover */
+    }
+    .centernav {
+      display: flex;
+      justify-content: space-between;
+      width: 100%;
+    }
+
+    .nav-it {
+      flex: 1;
+      text-align: center;
+    }
+
+    .topnav {
+      overflow: hidden;
+      background-color: #8F3A84;
+      color: #8F3A84;
+      display: flex;
+      justify-content: space-between;
+      width: 100%;
+      padding: 0 0px; /* Add horizontal padding to the nav bar */
+    }
+
+    .nav-item {
+      flex: 1;
+      text-align: center;
+    }
+
+    .topnav a {
+      display: block;
+      color:whitesmoke;
+      text-align: center;
+      padding: 14px 0;
+      text-decoration: none;
+      font-size: 16px; /* Decrease font size slightly for a more balanced appearance */
+      margin: 0;
+    }
+
+    .topnav a:hover {
+      background-color: whitesmoke;
+      color: #8F3A84;
+    }
+
+    .topnav a.active {
+      background-color: whitesmoke;
+      color: #8F3A84;
+    }
+
+    /* Customize the sections' appearance */
+    .section {
+      padding: 200px 0;
+      text-align: left;
+      opacity: 0; /* Set initial opacity to 0 for fade-in effect */
+    }
+
+    .section-content {
+      display: flex;
+      align-items: center;
+    }
+
+    .section-photo {
+      flex: 1;
+      padding: 10px;
+    }
+
+    .section-photo img {
+      max-width: 100%;
+      height: auto;
+    }
+
+    .section-details {
+      flex: 2;
+      padding: 10px;
+    }
+
+
+  .side-nav {
+  border-radius:10% ;
+  position: fixed;
+  top: 50%;
+  left: 0;
+  transform: translateY(-50%);
+  background-color: #8F3A84;
+  color: white;
+  padding: 20px;
+  z-index: 9999;
+  width: 200px; /* Adjust the width of the side navigation bar */
+  font-family: Arial, sans-serif;
+}
+
+.side-nav ul {
+  list-style-type: none;
+  padding: 0;
+  margin: 0;
+}
+
+.side-nav li {
+  margin-bottom: 20px;
+}
+
+.side-nav a {
+  color: white;
+  text-decoration: none;
+  display: block;
+  padding: 10px;
+  border-radius: 5px;
+}
+
+.side-nav a:hover {
+  background-color: #fff;
+  color: #8F3A84;
+}
+
+/* Adjust the position of the sections to make space for the fixed side navigation bar */
+.section-content {
+  display: flex;
+  align-items: center;
+  padding-left: 250px;
+}
+
+/* Adjust the fade-in effect to account for the fixed side navigation bar */
+.section.animate__fadeInUp {
+  opacity: 1;
+}
+
+/* Optional: Add a smooth scroll effect when navigating to the sections */
+html {
+  scroll-behavior: smooth;
+}
+  </style>
 </head>
 <body>
+  <nav class="topnav navbar-expand-sm">
+    <div class="container-fluid" style="padding: 0px;">
+      <ul class="navbar-nav centernav">
+        <li class="nav-item nav-it">
+          <a class="nav-link active" href="">statistics</a>
+        </li>
+        <li class="nav-item nav-it">
+          <a class="nav-link" href="/youhelp">how you could help</a>
+        </li>
+        <li class="nav-item nav-it">
+          <a class="nav-link" href="/post">post a story</a>
+        </li>
+        <li class="nav-item nav-it">
+          <a class="nav-link" href="/display">all the stories</a>
+        </li>
+        <li class="nav-item nav-it">
+          <a class="nav-link" href="/signout">Signout</a>
+        </li>
+      </ul>
+    </div>
+  </nav>
 
+
+<nav class="side-nav">
+  <p>page navigation:</p>
+    <ul>
+      <li><a href="#section1">Causes of Climate Change</a></li>
+      <li><a href="#section2">The Impact</a></li>
+      <li><a href="#section3">Marginalised vs Privileged</a></li>
+    </ul>
+  </nav>
+
+
+  <div class="section animate__animated" id="section1">
+    <div class="container section-content">
+      <div class="section-photo">
+        <img src="static/climatechange3.jpeg" alt="Photo 1">
+      </div>
+      <div class="section-details">
+        <h2>causes of climate change</h2>
+        <p>The main contributor to climate change is human activity, which releases greenhouse gases into the atmosphere, trapping heat and causing global warming. The main causes include the usage of halocarbons, deforestation, agriculture (especially cattle farming), industrial processes, waste management, and the burning of fossil fuels for energy and transportation. These activities increase the greenhouse effect by releasing more greenhouse gases such as carbon dioxide, methane, nitrous oxide, and others.</p>
+      </div>
+    </div>
+  </div>
+
+  <div class="section animate__animated" id="section2">
+    <div class="container section-content">
+      <div class="section-photo">
+        <img src="static/climatechange.jpeg" alt="Photo 2">
+      </div>
+      <div class="section-details">
+        <h2>the impact</h2>
+        <p>Global warming has a lot of impact on the world.
+        here is a list of the most cruicial impacts that global warming has on the world:</p>
+        <br>
+        <h4>Rising Temperatures:</h4>
+        <p>The global average temperature has increased by about 1.2°C since the late 19th century, leading to numerous climate-related challenges.</p>
+        <br>
+        <h4>Melting Ice and Rising Sea Levels:</h4>
+        <p> Arctic sea ice extent has significantly decreased, and global sea levels have risen by approximately 20 cm (7.8 inches) since the early 20th century, threatening coastal areas.</p>
+        <br>
+        <h4>Extreme Weather Events:</h4>
+        <p>More frequent and intense heatwaves, hurricanes, heavy rainfall, and droughts are occurring due to global warming, causing severe economic and human losses.</p>
+        <br>
+        <h4>Biodiversity Loss: </h4>
+        <p>Changing climate patterns are disrupting ecosystems, posing a risk to plant and animal species, and increasing the likelihood of extinction for numerous organisms.</p>
+        <br>
+        <p>There are more impacts to climate change that weren't mentioned above, but mainly these impacts are the most crucial to the earth </p>
+      </div>
+    </div>
+  </div>
+
+  <div class="section animate__animated" id="section3">
+    <div class="container section-content">
+      <div class="section-photo">
+        <img src="static/climatechange2.jpg" alt="Photo 3">
+      </div>
+      <div class="section-details">
+        <h2>marginalised vs privileged</h2>
+        <h4> marginalised women:</h4>
+        <p>Women who are already marginalised are especially affected by climate change, which causes economic vulnerability and gender inequality. Due to their responsibilities for supporting their families with food, water, and fuel, women frequently face the majority of the issues brought on by the climate in many developing nations. With shifting weather patterns, it becomes more challenging to acquire natural resources, which increases the workload for women, requires working longer hours to obtain essentials, and leaves less time for education and income-generating activities. Furthermore, disasters brought on by climate change have the potential to destroy communities, making women more susceptible to abuse and exploitation. Women's capacity to adapt to climate change and take part in measures to promote resilience is further restricted by limited access to resources and decision-making authority. </p>
+
+        <h4>privileged women:</h4>
+        <p>Although privileged women are affected by climate change, they may have more resources and chances for adaptation than marginalised women have. Due to major weather disasters like hurricanes or wildfires, they could experience lifestyle interruptions and financial difficulties. However, their access to social networks, financial resources, and educational opportunities may help them adapt more successfully to the changing environment. Nevertheless, all women are impacted by climate change; therefore, tackling its consequences on both privileged and marginalised women alike requires raising awareness, cooperation, and gender-inclusive policy.</p>
+      </div>
+    </div>
+  </div>
+
+  <!-- Include jQuery for simplifying the scroll event handling -->
+  <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
+
+  <script>
+    // Function to trigger animations when scrolling to each section
+    function animateOnScroll() {
+      // Get the viewport height to calculate when each section is in view
+      var windowHeight = $(window).height();
+
+      // Animate each section when it comes into view
+      $(".section").each(function () {
+        if ($(this).offset().top < $(document).scrollTop() + windowHeight - 100) {
+          $(this).addClass("animate__fadeInUp");
+        }
+      });
+    }
+
+    // Bind the animateOnScroll function to the scroll event
+    $(document).on("scroll", animateOnScroll);
+
+    // Trigger the animation on page load
+    animateOnScroll();
+  </script>
 </body>
 </html>

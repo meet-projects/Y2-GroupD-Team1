@@ -35,7 +35,7 @@ def signup():
         try:
             login_session['user'] = auth.create_user_with_email_and_password(email,password)
             user={"email":email,"password":password,"username":username}
-            UID=login_session['user']['localId']
+            UID = login_session['user']['localId']
             db.child("Users").child(UID).set(user)
             return redirect(url_for('youhelp'))
         except:
@@ -60,15 +60,13 @@ def signin():
 @app.route('/post', methods=['GET', 'POST'])
 def post():
     if request.method == 'POST':
-        title=request.form['title']
+        Title = request.form['Title']
         story=request.form['story']
-        uid=login_session['user']['localId']
+        UID = login_session['user']['localId']
         try:
-            post1={ "title":title,
-                    "story":story,
-                    "uid":uid,
-                    
-            }
+            post1 = {"Title":Title,
+                     "story":story,
+                     "UID":UID,}
 
             db.child("stories").push(post1)
             return redirect(url_for('display'))
@@ -81,9 +79,9 @@ def post():
 
 @app.route('/display',methods=['GET', 'POST'])
 def display():
-    uid=login_session['user']['localId']
-    stories=db.child("stories").get().val()
-    return render_template("all_memories.html", p=stories)
+    
+    Stories=db.child("stories").get().val()
+    return render_template("display.html", Stories=Stories)
 
 
 

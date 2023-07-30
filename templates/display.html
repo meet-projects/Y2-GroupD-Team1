@@ -9,11 +9,11 @@
 <body>
 
 <div class="card">
-  {% for post1 in p %}
+  {% for post1 in Stories %}
   <div class="card-text">
     
-    <h2>{{ p[post1]['title'] }} </h2>
-    <p>{{ p[post1]['story'] }}</p>
+    <h2>{{ Stories[post1]['title'] }} </h2>
+    <p>{{ Stories[post1]['story'] }}</p>
   </div>
   {% endfor %}
   </div>

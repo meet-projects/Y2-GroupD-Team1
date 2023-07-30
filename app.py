@@ -37,7 +37,7 @@ def signup():
             user={"email":email,"password":password,"username":username}
             UID = login_session['user']['localId']
             db.child("Users").child(UID).set(user)
-            return redirect(url_for('youhelp'))
+            return redirect(url_for('home2'))
         except:
             return redirect(url_for('signup'))
     return render_template("signup.html")
@@ -49,7 +49,7 @@ def signin():
         password = request.form['Password']
         try:
             login_session['user'] = auth.sign_in_with_email_and_password(email, password)
-            return redirect(url_for('youhelp'))
+            return redirect(url_for('home2'))
         except:
             return redirect(url_for('youhelp'))
     return render_template("signin.html")

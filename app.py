@@ -81,7 +81,7 @@ def post():
 
 @app.route('/display',methods=['GET', 'POST'])
 def display():
-    UID=login_session['user']['localId']
+    uid=login_session['user']['localId']
     stories=db.child("stories").get().val()
     return render_template("all_memories.html", p=stories)
 

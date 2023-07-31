@@ -6,6 +6,61 @@ body {
   font-size: 16px;
   color: #fff;
 }
+.active {
+      background-color: whitesmoke;
+      color: #8F3A84;
+    }
+
+    /* Optional: Add hover effect to the "Profile" button */
+    .navbar-nav .nav-it .nav-link:hover {
+      background-color: whitesmoke; /* Change the background color on hover */
+      color: #8F3A84; /* Change the text color on hover */
+    }
+    .centernav {
+      display: flex;
+      justify-content: space-between;
+      width: 100%;
+    }
+
+    .nav-it {
+      flex: 1;
+      text-align: center;
+    }
+
+    .topnav {
+      overflow: hidden;
+      background-color: #8F3A84;
+      color: #8F3A84;
+      display: flex;
+/*      justify-content: space-between;*/
+      width: 100%;
+      padding: 0 0px; /* Add horizontal padding to the nav bar */
+    }
+
+    .nav-item {
+      flex: 1;
+      text-align: center;
+    }
+
+    .topnav a {
+      display: block;
+      color:whitesmoke;
+      text-align: center;
+      padding: 14px 0;
+      text-decoration: none;
+      font-size: 16px; /* Decrease font size slightly for a more balanced appearance */
+      margin: 0;
+    }
+
+    .topnav a:hover {
+      background-color: whitesmoke;
+      color: #8F3A84;
+    }
+
+    .topnav a.active {
+      background-color: whitesmoke;
+      color: #8F3A84;
+    }
 .avatar img {
         border-radius: 100%;
         display: block;

@@ -117,7 +117,7 @@ def youhelp():
     return render_template("youhelp.html")
 
 @app.route('/courses')
-def statistics():
+def courses():
     return render_template("courses.html")
 
 @app.route('/signout')

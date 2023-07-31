@@ -24,7 +24,10 @@ db = firebase.database()
 
 @app.route('/')
 def home():
-    return render_template("home.html")
+    if 'user' in login_session:
+        return render_template("home.html", user=login_session['user'])
+    else:
+        return render_template("home.html", user=None)
 
 @app.route('/signup', methods=['GET', 'POST'])
 def signup():
@@ -37,7 +40,7 @@ def signup():
             user={"email":email,"password":password,"username":username}
             UID = login_session['user']['localId']
             db.child("Users").child(UID).set(user)
-            return redirect(url_for('home2'))
+            return redirect(url_for('home'))
         except:
             return redirect(url_for('signup'))
     return render_template("signup.html")

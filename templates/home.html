@@ -10,12 +10,15 @@
 <body>
     <header>
         <h1>Isha L'Isha</h1>
+
+        {% if user != None %}
         <nav>
             <a href="/post">Post Your Story</a>
             <a href="/statistics">Statistics</a>
             <a href="/display">Community Stories</a>
             <a href="/youhelp">How You Can Help</a>
         </nav>
+        {%endif%}
     </header>
 
     <section>
@@ -34,11 +37,17 @@
     </section>
 
     <div class="join-us">
+        {% if user == None %}
         <h2>Join Us</h2>
         <nav>
         <a href="/signup">Sign Up</a>
         <a href="/signin">Sign In</a>
         </nav>
+        {%else%}
+        <center><p>Thank you for joining us</p></center>
+
+        {%endif%}
+
     </div>
 
     <div class="socials">

@@ -116,6 +116,10 @@ def statistics():
 def youhelp():
     return render_template("youhelp.html")
 
+@app.route('/courses')
+def statistics():
+    return render_template("courses.html")
+
 @app.route('/signout')
 def signout():
     login_session['user'] = None

@@ -15,6 +15,120 @@
             <a href="/statistics">Statistics</a>
             <a href="/display">Community Stories</a>
             <a href="/youhelp">How You Can Help</a>
+            <a href="/courses">Workshops</a>
         </nav>
+
+        <nav class="side-nav">
+  <p>Our Courses</p>
+    <ul>
+      <li><a href="#section1">Create green areas</a></li>
+      <li><a href="#section2">Natural disaster training </a></li>
+      <li><a href="#section3">Fixing faults in home devices</a></li>
+      <li><a href="#section4">Art classes</a></li>
+      <li><a href="#section5">Sustainability</a></li>
+      <li><a href="#section3">Make your voice heard</a></li>
+    </ul>
+  </nav>
+
+
+  <div class="section animate__animated" id="section1">
+    <div class="container section-content">
+      <div class="section-photo">
+        <img src="static/" alt="Photo 1">
+      </div>
+      <div class="section-details">
+        <h2>Create green areas</h2>
+        <p>build gardens, plant trees, fix worn down parks while building big grass patches citizens of the neighborhood/city can enjoy</p>
+      </div>
+    </div>
+  </div>
+
+  <div class="section animate__animated" id="section2">
+    <div class="container section-content">
+      <div class="section-photo">
+        <img src="static/" alt="Photo 2">
+      </div>
+      <div class="section-details">
+        <h2>Natural disaster training</h2>
+        <p> Learn how to deal with floodings< earthquakes, fares and more things that can be caused by climate change.</p>
+        <br>
+      </div>
+    </div>
+  </div>
+
+  <div class="section animate__animated" id="section3">
+    <div class="container section-content">
+      <div class="section-photo">
+        <img src="static/" alt="Photo 3">
+      </div>
+      <div class="section-details">
+        <h2>Art classes using used materials</h2>
+        <p>Imbrace your artistc side using sustainable and recycled materails.</p>
+      </div>
+    </div>
+  </div>
+
+
+  <div class="section animate__animated" id="section4">
+    <div class="container section-content">
+      <div class="section-photo">
+        <img src="static/" alt="Photo 4">
+      </div>
+      <div class="section-details">
+        <h2>Sustainability</h2>
+        <p>What does it mean to be sustainable and how can you focus on that as a marginalized community.</p>
+      </div>
+    </div>
+  </div>
+
+  <div class="section animate__animated" id="section5">
+    <div class="container section-content">
+      <div class="section-photo">
+        <img src="static/" alt="Photo 5">
+      </div>
+      <div class="section-details">
+        <h2>Make your voice heard</h2>
+        <p>Learn about how to make your voice heard and be involved in decision involving climate change and the envoirment.</p>
+      </div>
+    </div>
+  </div>
+
+   <div class="section animate__animated" id="section6">
+    <div class="container section-content">
+      <div class="section-photo">
+        <img src="static/" alt="Photo 6">
+      </div>
+      <div class="section-details">
+        <h2></h2>
+        <p></p>
+      </div>
+    </div>
+  </div>
+
+  <!-- Include jQuery for simplifying the scroll event handling -->
+  <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
+
+  <script>
+    // Function to trigger animations when scrolling to each section
+    function animateOnScroll() {
+      // Get the viewport height to calculate when each section is in view
+      var windowHeight = $(window).height();
+
+      // Animate each section when it comes into view
+      $(".section").each(function () {
+        if ($(this).offset().top < $(document).scrollTop() + windowHeight - 100) {
+          $(this).addClass("animate__fadeInUp");
+        }
+      });
+    }
+
+    // Bind the animateOnScroll function to the scroll event
+    $(document).on("scroll", animateOnScroll);
+
+    // Trigger the animation on page load
+    animateOnScroll();
+  </script>
+</body>
+</html>
 </body>
 </html>

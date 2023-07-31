@@ -1,0 +1,45 @@
+#opening{
+	text-align: center;
+	background-color: #800080;
+	color: white;
+
+/*	background-image: url("https://www.preventionweb.net/sites/default/files/styles/landscape_16_9/public/2022-05/Image-Meciso-women-walk-yellow-min.jpg?h=2cf907fb&itok=-C1JRHi2");*/
+/*	background-size: 1000px;*/
+}
+
+body{
+	color: #800080;
+}
+nav{
+	background-color:uy;
+	color: #800080;
+	margin-top: 10px;
+}
+
+
+nav a {
+    margin: 0 15px;
+    text-decoration: none;
+    color: #fff;
+    font-size: 18px;
+    text-transform: uppercase;
+}
+
+nav a:hover {
+    color: #f39c12;
+}
+
+h4{
+    font-size: 20px;
+    text-transform: uppercase;
+     text-indent: 50px;
+
+}
+
+p {
+    font-size: 18px;
+    text-transform: uppercase;
+    color: black;
+    letter-spacing: 2px;
+
+}

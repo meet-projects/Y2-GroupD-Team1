@@ -43,12 +43,15 @@ body {
 
         .intro, .about {
             width: 45%;
+            color: black;
+            font-size: 25px;
         }
 
         .intro h2,
         .about h2 {
-            color: #800080;
-            font-size: 24px;
+            color: black;
+            font-size: 30px;
+
         }
 
         .join-us {

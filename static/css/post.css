@@ -4,7 +4,7 @@
 body {
   font-family: poppins;
   font-size: 16px;
-  color: #fff;
+  background-color: gray;
 }
 .active {
       background-color: whitesmoke;
@@ -29,7 +29,7 @@ body {
 
     .topnav {
       overflow: hidden;
-      background-color: #8F3A84;
+      background-color: #ff2276;
       color: #8F3A84;
       display: flex;
 /*      justify-content: space-between;*/
@@ -147,7 +147,7 @@ body {
   font-size: 14px;
 }
 .form-box button {
-  background-color: #800080;
+  background-color: #ff2276;
   color: #fff;
   border: none;
   border-radius: 5px;

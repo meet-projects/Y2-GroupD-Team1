@@ -1,14 +1,8 @@
-/* Reset some default browser styles */
-* {
-  margin: 0;
-  padding: 0;
-  box-sizing: border-box;
-}
 
 body {
   font-family: Arial, sans-serif;
   line-height: 1.6;
-  background-color: #f2f2f2;
+  background-color: #FF2276;
   padding: 20px;
 }
 
@@ -49,7 +43,7 @@ input[type="password"] {
 
 input[type="submit"] {
   width: 100%;
-  background-color: #800080;
+  background-color: #FF2276;
   color: #fff;
   padding: 10px;
   border: none;

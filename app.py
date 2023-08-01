@@ -127,6 +127,9 @@ def signout():
     return redirect(url_for('signin'))
 
 
+@app.route('/template')
+def template():
+    return render_template('index.html')
 
 
 

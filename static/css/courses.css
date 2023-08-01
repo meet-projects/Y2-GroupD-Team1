@@ -304,3 +304,31 @@ span a {
       background-color: whitesmoke;
       color: #8F3A84;
     }
+
+    .side-nav {
+      text-align: left;
+      position: relative;
+      margin: 200px auto;
+      padding: 40px;
+      border-radius: 5px;
+      box-shadow: 0 0 10px #000;
+      position: absolute;
+      top: auto;
+      bottom: auto;
+      order: 3;
+    }
+    .side-nav p{
+      color: black;
+      font-size: 25px;
+
+    }
+
+    .side-nav ul li a{
+      color: black;
+      font-size: 18px;
+
+    }
+
+    .section_animate__animated{
+      margin: 0px auto;
+    }

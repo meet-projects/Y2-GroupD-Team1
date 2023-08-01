@@ -25,9 +25,9 @@ db = firebase.database()
 @app.route('/')
 def home():
     if 'user' in login_session:
-        return render_template("home.html", user=login_session['user'])
+        return render_template("index.html", user=login_session['user'])
     else:
-        return render_template("home.html", user=None)
+        return render_template("index.html", user=None)
 
 @app.route('/signup', methods=['GET', 'POST'])
 def signup():

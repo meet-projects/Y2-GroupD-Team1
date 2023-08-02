@@ -330,5 +330,17 @@ span a {
     }
 
     .section_animate__animated{
-      margin: 0px auto;
+      margin: 100px auto;
+      
+
+    } 
+
+    .section-details{
+      margin: 90px auto  ;
+      text-align: center;
     }
+
+    .section-details1{
+      margin: 90px;
+      text-align: center;
+    }    

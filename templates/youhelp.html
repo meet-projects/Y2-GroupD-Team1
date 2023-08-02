@@ -1,32 +1,72 @@
 <!DOCTYPE html>
 <html>
 <head>
-	<meta charset="utf-8">
-	<meta name="viewport" content="width=device-width, initial-scale=1">
-	<link rel="stylesheet" href="static/css/youhelp.css">
-	<title>Isha L'Isha</title>
-  <link href="static/css/bootstrap.css" rel="stylesheet" />
-    <!-- IONICON STYLE SHEET FOR BEAUTIFUL ICONS -->
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <link rel="stylesheet" href="static/css/youhelp.css">
+    <title>Isha L'Isha</title>
+    <link href="static/css/bootstrap.css" rel="stylesheet" />
     <link href="static/css/ionicons.css" rel="stylesheet" />
-    <!-- STYLE FOR OPENING IMAGE IN POPUP USING FANCYBOX-->
     <link href="static/js/source/jquery.fancybox.css" rel="stylesheet" />
-    <!-- CUSTOM CSS -->
     <link href="static/css/template.css" rel="stylesheet" />
-	<style>
-		body {
-      font-family: Arial, sans-serif;
-      line-height: 1.6;
-      margin: 0;
-      padding: 0;
-    }
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            line-height: 1.6;
+            margin: 0;
+            padding: 0;
+            background-color: grey;
+            align-items: center;
+        }
 
-    
-	</style>
+        /* Style the main title */
+        #opening h1 {
+            font-size: 36px;
+            text-align: center;
+            margin: 30px 0;
+            color: #333;
+        }
+
+        /* Style the section headings */
+        h2 {
+            font-size: 28px;
+            text-align: center;
+            margin: 20px 0;
+            color: #333;
+        }
+
+        /* Style the content paragraphs */
+        p {
+            font-size: 16px;
+            line-height: 1.8;
+            color: #555;
+        }
+
+        /* Style the divs containing the content */
+        .divst {
+            padding: 20px;
+            border-radius: 5px;
+            background-color: #fff;
+            box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+            margin-bottom: 50px;
+            width: 60%;
+            text-align: center;
+        }
+
+        /* Style the div containing the "How can you help?" heading */
+        #help-heading {
+            background-color: #f2f2f2;
+            padding: 15px;
+            margin-bottom: 30px;
+            text-align: center;
+            font-size: 24px;
+            color: #333;
+        }
+    </style>
 </head>
 
 <body>
-	<div class="navbar navbar-default scroll-me">
-        <!-- pass scroll-me class above a tags to starts scrolling -->
+    <div class="navbar navbar-default scroll-me">
         <div class="container">
             <div class="navbar-header">
                 <button type="button" class="navbar-toggle" data-toggle="collapse" data-target=".navbar-collapse">
@@ -36,118 +76,81 @@
                 </button>
             </div>
             <div class="navbar-collapse collapse">
-              <center>
                 <ul class="nav navbar-nav navbar-center">
                     <li><a href="/">HOME</a></li>
                     <li><a href="/statistics">STATISTICS</a></li>
                     <li><a href="/youhelp">HOW YOU COULD HELP</a></li>
                     <li><a href="/post">POST A STORY</a></li>
                     <li><a href="/display">STORIES</a></li>
-                    <li><a href="/courses">WORKSHOPS</a>
-                    </li>
+                    <li><a href="/courses">WORKSHOPS</a></li>
                 </ul>
-                </center>
-
             </div>
-
         </div>
     </div>
 
-	<div id='opening'>
-	   <br>
-	   <br>
-	   <h1>Take Initiave</h1>
-	   <br>
-	   <br>
-	</div>
+    <center><div class="divst" id='opening'>
+        <h1 style="font-weight: bold;">Take Initiative</h1>
+        <center><h3>how can you help?</h3></center>
+    </div></center>
 
-	<br>
-	<br>
+     <center><div class="divst">
+        <center><h4 style="font-weight: bold;">Access to education</h4>
+        <p>Support initiatives that provide education and training to women in marginalized communities about climate change impacts, sustainable practices, and adaptation strategies. This knowledge empowers them to make informed decisions and take proactive steps to protect their communities.</p></center>
+    </div></center>
 
-	<div>
-		<h2> How can you help? <h2>
-	</div>
+     <center><div class="divst">
+    	<center>
+        <h4 style="font-weight: bold;">Sustainable livelihoods</h4>
+        <p>Encourage and invest in sustainable livelihood projects that are climate-resilient and benefit women. This could include promoting eco-friendly agriculture, renewable energy ventures, and small-scale businesses that contribute to community resilience.</p></center>
+    </div></center>
 
-	<br>
-	<br>
+     <center><div class="divst">
+    	<center>
+        <h4 style="font-weight: bold;">Advocacy and awareness</h4>
+        <p>Support organizations working to raise awareness of gender-specific climate impacts and advocate for policies that address the needs and rights of women in marginalized communities.</p></center>
+    </div></center>
 
-	<div>
-		<h4>Access to education</h4>
-		<br>
-		<p> Support initiatives that provide education and training to women in marginalized<br> communities about climate change impacts,<br> sustainable practices,and adaptation strategies. <br>This knowledge empowers them to make informed decisions and take proactive steps to protect their communities.</p>
-	</div>
+     <center><div class="divst">
+    	<center>
+        <h4 style="font-weight: bold;">Health and reproductive rights</h4>
+        <p>Recognize the intersectionality of climate change with women's health and reproductive rights. Addressing these issues empowers women to make decisions about their bodies and families, contributing to sustainable population management and adaptation.</p></center>
+    </div></center>
 
-	<br>
+     <center><div class="divst">
+    	<center>
+        <h4 style="font-weight: bold;">Reduce Your Carbon Footprint</h4>
+        <p>Take actions to reduce your own carbon footprint. Adopt sustainable practices such as conserving energy, reducing waste, using public transportation or biking, and consuming responsibly.</p>
+    </center>
+    </div></center>
 
-	<div>
-		<h4>Sustainable livelihoods</h4>
-		<br>
-		<p>Encourage and invest in sustainable livelihood projects that are climate-resilient and benefit women.<br> This could include promoting eco-friendly agriculture, renewable energy ventures,<br> and small-scale businesses that contribute to community resilience.</p>
-	</div>
+     <center><div class="divst">
+    	<center>
+        <h4 style="font-weight: bold;">Support Sustainable Products</h4>
+        <p>Be conscious of the products you buy and support companies that prioritize sustainability and fair trade practices. This indirectly helps women in marginalized communities who might be involved in producing these products.</p></center>
+    </div></center>
 
-	<br>
+     <center><div class="divst">
+        <center><h4 style="font-weight: bold;">Promote Sustainable Lifestyles</h4>
+        <p>Encourage friends, family, and colleagues to adopt sustainable lifestyles and support causes that champion climate action and women's rights.</p></center>
+    </div></center>
 
-	<div>
-		<h4>Advocacy and awareness</h4>
-		<br>
-		<p>Support organizations working to raise awareness of gender-specific climate impacts and<br> advocate for policies that address the needs and rights of women in marginalized communities.</p>
-	</div>
+     <center><div class="divst">
+    	<center>
+        <h4 style="font-weight: bold;">Donate to Climate and Women-Centric Charities</h4>
+        <p>Contribute to reputable charities and organizations that focus on climate change solutions and women's empowerment in marginalized areas.</p></center>
+    </div></center>
 
-	<br>
+     <center><div class="divst">
+    	<center>
+        <h4 style="font-weight: bold;">Stay Politically Engaged</h4>
+        <p>Stay informed about political developments related to climate change and women's rights. Vote for candidates who prioritize these issues and contact your representatives to express your concerns.</p></center>
+    </div></center>
 
-	<div>
-		<h4>Health and reproductive rights</h4>
-		<br>
-		<p>Recognize the intersectionality of climate change with women's health and reproductive rights.<br> Addressing these issues empowers women to make decisions about their bodies and families,<br> contributing to sustainable population management and adaptation.</p>
-	</div>
-
-	<br>
-
-	<div>
-		<h4>Reduce Your Carbon Footprint</h4>
-		<br>
-		<p>Take actions to reduce your own carbon footprint.<br> Adopt sustainable practices such as conserving energy, reducing waste, using public <br>transportation or biking, and consuming responsibly.</p>
-	</div>
-
-	<br>
-
-	<div>
-		<h4>Support Sustainable Products</h4>
-		<br>
-		<p>Be conscious of the products you buy and support companies that prioritize sustainability and fair trade practices.<br> This indirectly helps women in marginalized communities who might be involved in producing these products.</p>
-	</div>
-
-	<br>
-
-	<div>
-		<h4>Promote Sustainable Lifestyles</h4>
-		<br>
-		<p>Encourage friends, family, and colleagues to adopt sustainable lifestyles and<br> support causes that champion climate action and women's rights.</p>
-	</div>
-
-	<br>
-
-	<div>
-		<h4>Donate to Climate and Women-Centric Charities</h4>
-		<br>
-		<p>Contribute to reputable charities and organizations that focus<br> on climate change solutions and women's empowerment in marginalized areas.</p>
-	</div>
-
-	<br>
-
-	<div>
-		<h4>Stay Politically Engaged</h4>
-		<br>
-		<p>Stay informed about political developments related to climate change and women's rights.<br> Vote for candidates who prioritize these issues and contact your representatives to express your concerns.</p>
-	</div>
-
-	<br>
-
-	<div>
-		<h4>Support Women's Initiatives</h4>
-		<br>
-		<p>Seek out and support initiatives<br> and projects led by women in marginalized communities that aim to tackle climate change.<br> You can contribute financially or volunteer your time and skills to assist with their efforts.</p>
-	</div>
+     <center><div class="divst">
+    	<center>
+        <h4 style="font-weight: bold;">Support Women's Initiatives</h4>
+        <p>Seek out and support initiatives and projects led by women in marginalized communities that aim to tackle climate change. You can contribute financially or volunteer your time and skills to assist with their efforts.</p></center>
+    </div></center>
 
 </body>
 </html>

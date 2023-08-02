@@ -48,13 +48,13 @@ def signup():
 @app.route('/signin', methods=['GET', 'POST'])
 def signin():
     if request.method == 'POST':
-        email = request.form['Email']
-        password = request.form['Password']
+        email = request.form['email']
+        password = request.form['password']
         try:
             login_session['user'] = auth.sign_in_with_email_and_password(email, password)
-            return redirect(url_for('home2'))
+            return redirect(url_for('statistics'))
         except:
-            return redirect(url_for('youhelp'))
+            return redirect(url_for('statistics'))
     return render_template("signin.html")
 
 
@@ -124,7 +124,7 @@ def courses():
 def signout():
     login_session['user'] = None
     auth.current_user = None
-    return redirect(url_for('signin'))
+    return redirect(url_for('template'))
 
 
 @app.route('/template')

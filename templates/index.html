@@ -49,8 +49,9 @@
                     <li><a href="/youhelp">HOW YOU COULD HELP</a></li>
                     <li><a href="/post">POST A STORY</a></li>
                     <li><a href="/display">STORIES</a></li>
-                    <li><a href="/courses">WORKSHOPS</a>
-                    </li>
+                    <li><a href="/courses">WORKSHOPS</a></li>
+                    <li><a href="/signout">signout</a></li>
+
                 </ul>
             </div>
 
@@ -215,7 +216,7 @@
                  <div class="row text-center" data-scroll-reveal="enter from the bottom after 0.4s">
 
                     <div class="col-md-8 col-md-offset-2 col-sm-8 col-sm-offset-2">
-                          {% if user == None %}
+                          {% if not user %}
                           <h2>Join Us?</h2>
                           <nav>
                           <a href="/signup">Sign Up</a>
